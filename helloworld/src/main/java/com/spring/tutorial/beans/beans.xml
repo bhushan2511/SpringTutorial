@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="person" class="com.udemy.tutorial.Person">
+	<!-- setting the value using the constructor -->
+		<constructor-arg value="NagaBhushan" name="name"
+			type="String">
+		</constructor-arg>
+		<constructor-arg value="777" name="id" type="int"></constructor-arg>
+		
+		<!-- Property, setting the value using set method -->
+		<property name="taxId" value="5678"></property>
+
+		<!-- Dependency injection -->
+		<property name="address" ref="address"></property>
+	</bean>
+	<bean id="address" class="com.udemy.tutorial.Address">
+		<constructor-arg name="street" value="2430 W 25th St"></constructor-arg>
+		<constructor-arg name="postalCode" value="66047"></constructor-arg>
+	</bean>
+</beans>

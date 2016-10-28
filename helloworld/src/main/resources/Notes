@@ -1,0 +1,12 @@
+ 	/*
+    	 * 1. ClassPathXmlApplicationContext if we use this then it is not required to specify complete qualified path
+    	 * 2. ApplicationContext is super class, can take other context as well
+    	 * 
+    	 */
+    	 
+ 
+
+Lecture 10:
+
+Dependency Injection: 
+
